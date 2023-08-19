@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./dashboard.css">
+        <title>Blogging App</title>
+    </head>
+    <body>
+        <ul id="head">
+            <li>Personal Blogging App</li>
+            <li>
+                <a href="#" id="gotoSignup">Logout</a>
+            </li>
+        </ul>
+        <h1 id="signupHead">Dashboard</h1>
+        <div id="postWrapper">
+            <form id="createPost">
+                <input
+                    type="text"
+                    required
+                    id="postTitle"
+                    placeholder="Title of your post"
+                >
+                <br>
+                <textarea
+                    id="postText"
+                    cols="30"
+                    rows="6"
+                    required
+                    placeholder="What is in yoour mind"
+                ></textarea>
+                <br>
+                <button type="submit">Publish Blog</button>
+            </form>
+        </div>
+    </body>
+</html>

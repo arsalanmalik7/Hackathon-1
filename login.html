@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./login.css">
+        <title>Threads</title>
+    </head>
+    <body>
+        <ul id="head">
+            <li>Personal Blogging App</li>
+            <li>
+                <a href="./index.html" id="gotoSignup">Signup</a>
+            </li>
+        </ul>
+        <h1 id="loginHead">Login Page</h1>
+        <div id="login">
+            <form class="form" id="loginForm">
+                <div class="group">
+                    <input required="true" class="main-input" type="text">
+                    <span class="highlight-span"></span>
+                    <label class="lebal-email">Email</label>
+                </div>
+                <div class="container-1">
+                    <div class="group">
+                        <input required="true" class="main-input" type="password">
+                        <span class="highlight-span"></span>
+                        <label class="lebal-email">password</label>
+                    </div>
+                </div>
+                <button class="submit">Login</button>
+                <br>
+                <br>
+                <br>
+                <p class="errorMsg"></p>
+            </form>
+        </div>
+        <script type="module" src="./login.mjs"></script>
+    </body>
+</html>
