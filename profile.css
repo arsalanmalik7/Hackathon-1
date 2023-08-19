@@ -1,0 +1,63 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: #EBE5FC;
+
+}
+
+#passwords {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#passwords input {
+    padding: 0.3rem;
+    width: 18rem;
+    border-radius: 12px;
+}
+
+#fallback {
+    font-size: 10rem;
+}
+
+
+
+#head {
+    display: flex;
+    justify-content: space-between;
+    background-color: #7749F8;
+    color: white;
+    list-style: none;
+    padding: 0.5rem;
+    margin-bottom: 0px;
+}
+
+#gotoSignup {
+    background-color: #962fbf;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+#createPost button {
+    width: 150px;
+    margin: auto;
+    padding: 0.3rem;
+    color: white;
+    background-color: #7749F8;
+    border-radius: 12px;
+
+}
+
+#loginHead {
+    padding: 1.5rem;
+    box-shadow: 2px 2px 6px black;
+    margin-top: 0px;
+}
+
+#backToDashboard{
+    font-size: xx-large;
+}

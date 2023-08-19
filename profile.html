@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./profile.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <title>Blogging App</title>
+    </head>
+    <body>
+        <ul id="head">
+            <li id="backToDashboard">
+                <i class="bi bi-arrow-bar-left"></i>
+            </li>
+            <li>Personal Blogging App</li>
+            <li id="myProfile"></li>
+            <li>
+                <button class="signout" id="gotoSignup">Logout</button>
+            </li>
+        </ul>
+        <h2 id="loginHead">Profile</h2>
+        <div>
+            <h1 id="fallback">
+                <i class="bi bi-person-circle"></i>
+            </h1>
+            <h1 id="myName"></h1>
+            <span id="edit">
+                <i class="bi bi-pencil-fill"></i>
+            </span>
+            <h2>Password</h2>
+            <div id="passwords">
+                <input type="password" placeholder="Old Password" id="oldPassword">
+                <input type="password" placeholder="New Password" id="newPassword">
+                <input type="password" placeholder="Repeat Password" id="repeatPassword">
+            </div>
+        </div>
+    </body>
+    <script type="module" src="./profile.mjs"></script>
+</html>

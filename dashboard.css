@@ -13,7 +13,7 @@
     flex-direction: column;
     min-width: 200px;
     max-width: 800px;
-    
+
 }
 
 #postTitle {
@@ -57,4 +57,141 @@
     background-color: #7749F8;
     border-radius: 12px;
 
+}
+
+#postText {
+    font-size: 1.3rem;
+    padding: 1rem;
+
+}
+
+.post {
+    padding: 1.5rem;
+    box-shadow: 1px 1px 2px grey;
+}
+
+#allPosts {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+
+.form_main {
+    width: 350px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    padding: 30px 30px 30px 30px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.062);
+    align-self: center;
+
+}
+
+@media screen and (max-width:425px) {
+    .form_main {
+        width: 300px;
+    }
+}
+
+.heading {
+    font-size: 2.5em;
+    color: #2e2e2e;
+    font-weight: 700;
+    margin: 15px 0 30px 0;
+}
+
+.inputContainer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.inputField {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(173, 173, 173);
+    border-radius: 30px;
+    margin: 10px 0;
+    color: black;
+    font-size: .8em;
+    font-weight: 500;
+    box-sizing: border-box;
+    padding-left: 30px;
+}
+
+.inputField:focus {
+    outline: none;
+    border-bottom: 2px solid rgb(199, 114, 255);
+}
+
+.inputField::placeholder {
+    color: rgb(80, 80, 80);
+    font-size: 1em;
+    font-weight: 500;
+}
+
+#button {
+    position: relative;
+    width: 100%;
+    border: 2px solid #8000ff;
+    background-color: #8000ff;
+    height: 40px;
+    color: white;
+    font-size: .8em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    margin: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#button::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.253);
+    height: 100%;
+    width: 150px;
+    top: 0;
+    left: -200px;
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 100px;
+    filter: blur(10px);
+    transition-duration: .5s;
+}
+
+#button:hover::after {
+    transform: translateX(600px);
+    transition-duration: .5s;
+}
+
+#corss {
+    position: relative;
+    padding: 0.5rem;
+    bottom: 3rem;
+    left: 8rem;
+    cursor: pointer;
+}
+
+#popupOverlay {
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    display: flex;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
 }

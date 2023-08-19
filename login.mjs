@@ -16,10 +16,11 @@ const auth = getAuth(app);
 
 let loginForm = document.querySelector("#loginForm");
 loginForm.addEventListener('submit', (event) => {
-    const auth = getAuth();
     event.preventDefault();
     let email = event.target[0].value;
     let password = event.target[1].value;
+    console.log(email)
+    console.log(password)
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             // Signed in 
@@ -63,3 +64,6 @@ loginForm.addEventListener('submit', (event) => {
             errorMsg.innerHTML = errorMessage.slice(errorMessage.indexOf('/') + 1, errorMessage.indexOf(')'));
         });
 })
+
+const user = auth.currentUser;
+console.log(user)

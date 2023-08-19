@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword, updateProfile } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-auth.js";
-
+import { getStorage, ref, uploadBytes } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-storage.js"
 const firebaseConfig = {
     apiKey: "AIzaSyCOB12Lf0lqtanqj-HQt8DNZqhRfHTCA2g",
     authDomain: "blogging-app-8.firebaseapp.com",
@@ -13,13 +13,24 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-
+const storage = getStorage(app);
+const storageRef = ref(storage);
 
 let signupForm = document.querySelector("#signupForm");
 signupForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    
-    
+    const firstName = event.target[0].value;
+    const lastName = event.target[1].value;
+    updateProfile(auth.currentUser, {
+        firstName: firstName,
+        lastName: lastName
+
+    }).then((response) => {
+        console.log(response)
+    }).catch((error) => {
+        console.log(error)
+    });
+
     let email = event.target[2].value;
     let password = event.target[3].value;
     createUserWithEmailAndPassword(auth, email, password)
@@ -27,10 +38,10 @@ signupForm.addEventListener('submit', (event) => {
             // Signed in 
             const user = userCredential.user;
             let popup = `<div class="popup-container" id="popupContainer">
-              <div class="popup-content">
-                <h2>Signup Successful!</h2>
-                <p>Thank you for signing up.</p>
-              </div>
+        <div class="popup-content">
+        <h2>Signup Successful!</h2>
+        <p>Thank you for signing up.</p>
+        </div>
             </div>`;
             let parent = event.target.parentNode.parentNode;
             let sibling = parent.lastChild.previousSibling;
@@ -48,9 +59,11 @@ signupForm.addEventListener('submit', (event) => {
             tempElement.innerHTML = popup;
             let newPopupContainer = tempElement.firstChild;
             parent.insertBefore(newPopupContainer, sibling);
-            let username = event.target[0].value;
+            let firstName = event.target[0].value;
+            let lastName = event.target[1].value;
             let uid = user.uid;
-            localStorage.setItem('username', username);
+            localStorage.setItem('firstName', firstName);
+            localStorage.setItem('lastName', lastName);
 
         })
         .catch((error) => {
@@ -64,4 +77,9 @@ signupForm.addEventListener('submit', (event) => {
 
             // ..
         })
+
+
+
 })
+
+

@@ -3,30 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./signup.css">
-        <title>Threads</title>
+        <link rel="stylesheet" href="./inde.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+            crossorigin="anonymous"
+        >
+        <title>Blogging App</title>
     </head>
     <body>
-        <ul id="head">
-            <li>Personal Blogging App</li>
-            <li>
-                <a href="./login.html" id="gotoSignup">Login</a>
-            </li>
-        </ul>
-        <h1 id="signupHead">Sign up</h1>
-        <div class="container">
-            <form id="signupForm">
-                <div class="head"></div>
-                <div class="inputs">
-                    <input type="text" required placeholder="First Name">
-                    <input type="text" required placeholder="Last Name">
-                    <input type="email" required placeholder="Email">
-                    <input type="password" required placeholder="Password">
-                </div>
-                <button type="submit">Sign up</button>
-            </form>
-            <div class="form-footer"></div>
+        <div id="buttons">
+            <button type="button" class="btn btn-primary" id="signup">Sign up</button>
+            <button type="button" class="btn btn-warning" id="signin">Sign in</button>
         </div>
-        <script type="module" src="./signup.mjs"></script>
+        <div id="allPosts"></div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <script type="module" src="./index.mjs"></script>
     </body>
 </html>
